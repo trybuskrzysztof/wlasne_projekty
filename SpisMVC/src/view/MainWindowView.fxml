@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+   <children>
+      <HBox prefHeight="450.0" prefWidth="900.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="450.0" prefWidth="300.0" spacing="20.0" style="-fx-background-color: LIGHTGRAY;">
+               <children>
+                  <HBox prefWidth="235.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="buttonImport" mnemonicParsing="false" onAction="#listImport" prefWidth="80.0" text="Wczytaj">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#listClear" prefWidth="80.0" text="Wyczyść" />
+                        <Button fx:id="buttonExport" mnemonicParsing="false" onAction="#listExport" prefWidth="80.0" text="Zapisz" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label alignment="CENTER" contentDisplay="RIGHT" text="Lista Pracowników:">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="70.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="tableView" prefHeight="323.0" prefWidth="293.0">
+                    <columns>
+                      <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="Imie" />
+                      <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Nazwisko" />
+                        <TableColumn fx:id="roomNumberColumn" prefWidth="75.0" text="Numer pokoju" />
+                        <TableColumn fx:id="hourBeginningColumn" prefWidth="75.0" text="Godzina od" visible="false" />
+                        <TableColumn fx:id="hourEndColumn" prefWidth="75.0" text="Godzina do" visible="false" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="450.0" prefWidth="300.0" spacing="30.0" style="-fx-background-color: LIGHTGRAY;">
+               <children>
+                  <HBox spacing="50.0">
+                     <children>
+                        <Button fx:id="buttonReport" mnemonicParsing="false" prefHeight="0.0" prefWidth="80.0" text="Raport" />
+                        <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#addValue" prefWidth="80.0" text="Dodaj" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <Label text="Imię" />
+                        <TextField fx:id="firstNameField" promptText="Imię pracownika" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Nazwisko" />
+                        <TextField fx:id="lastNameField" promptText="Nazwisko pracownika" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Numer pokoju" />
+                        <TextField fx:id="roomNumberField" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="283.0" promptText="Numer pokoju, w którym pracownik urzęduje" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Godzina OD:" />
+                        <TextField fx:id="hourBeginningField" promptText="Od której godziny pracownik przyjmuje" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Godzina DO:" />
+                        <TextField fx:id="hourEndField" promptText="Do której godziny pracownik przyjmuje" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefWidth="300.0" spacing="20.0" style="-fx-background-color: lightgray;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="buttonGenerate" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#GenerateMap" prefHeight="80.0" prefWidth="120.0" text="Generuj mapę" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="80.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ImageView fx:id="listaImage" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../controller/inu_mapa_szablon_kolor.png" />
+                     </image></ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

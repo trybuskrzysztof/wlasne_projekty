@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Automatio Test" duration-ms="133409" started-at="2015-02-15T09:29:57Z" finished-at="2015-02-15T09:32:10Z">
+    <groups>
+    </groups>
+    <test name="Smoke Testcases" duration-ms="133409" started-at="2015-02-15T09:29:57Z" finished-at="2015-02-15T09:32:10Z">
+      <class name="testngFiles.SaucelabTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testngFiles.SaucelabTest@4a8f5f75]" name="setup" duration-ms="12047" started-at="2015-02-15T15:01:31Z" finished-at="2015-02-15T15:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- testngFiles.SaucelabTest -->
+      <class name="testngFiles.DependenyAnnot">
+        <test-method status="PASS" signature="OpeningBrowser()[pri:0, instance:testngFiles.DependenyAnnot@ac42091]" name="OpeningBrowser" duration-ms="44773" started-at="2015-02-15T14:59:57Z" finished-at="2015-02-15T15:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpeningBrowser -->
+        <test-method status="PASS" signature="Timerelated()[pri:0, instance:testngFiles.DependenyAnnot@ac42091]" name="Timerelated" duration-ms="36" started-at="2015-02-15T15:00:42Z" finished-at="2015-02-15T15:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Timerelated -->
+        <test-method status="PASS" signature="software()[pri:0, instance:testngFiles.DependenyAnnot@ac42091]" name="software" duration-ms="1" started-at="2015-02-15T15:00:42Z" finished-at="2015-02-15T15:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- software -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testngFiles.DependenyAnnot@ac42091]" name="Login" duration-ms="25542" started-at="2015-02-15T15:00:42Z" finished-at="2015-02-15T15:01:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="FlightBooking()[pri:0, instance:testngFiles.DependenyAnnot@ac42091]" name="FlightBooking" duration-ms="24265" started-at="2015-02-15T15:01:07Z" depends-on-methods="testngFiles.DependenyAnnot.OpeningBrowser" finished-at="2015-02-15T15:01:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FlightBooking -->
+      </class> <!-- testngFiles.DependenyAnnot -->
+      <class name="testngFiles.TestBase">
+        <test-method status="PASS" signature="software()[pri:0, instance:testngFiles.TestBase@5fa34e31]" name="software" duration-ms="1" started-at="2015-02-15T15:01:44Z" finished-at="2015-02-15T15:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- software -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testngFiles.TestBase@5fa34e31]" name="Login" duration-ms="26623" started-at="2015-02-15T15:01:44Z" finished-at="2015-02-15T15:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="deinstallsoftware()[pri:0, instance:testngFiles.TestBase@5fa34e31]" name="deinstallsoftware" is-config="true" duration-ms="2" started-at="2015-02-15T15:02:10Z" finished-at="2015-02-15T15:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deinstallsoftware -->
+      </class> <!-- testngFiles.TestBase -->
+    </test> <!-- Smoke Testcases -->
+  </suite> <!-- Automatio Test -->
+</testng-results>

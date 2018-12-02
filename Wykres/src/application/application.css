@@ -1,0 +1,6 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.my-label{
+	-fx-text-fill:rgb(100%,10%,10%);
+/* 	-fx-text-alignment:right; */
+}

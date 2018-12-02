@@ -1,0 +1,358 @@
+
+import java.awt.event.*;
+import javax.swing.*;
+
+//import CalculatorPanel.CommandAction;
+
+import java.awt.*;
+
+
+public class GridBagLayoutTest {
+
+	public static void main(String[] args){
+		
+		EventQueue.invokeLater(new Runnable()
+				{
+				public void run(){
+				
+					FontFrame frame = new FontFrame();
+					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					frame.setVisible(true);
+//					frame.setResizable(true);
+					
+				}
+			});
+	}
+	
+}
+
+class FontFrame extends JFrame{
+	
+	public FontFrame()
+	{
+		setTitle("ZDA Calculator");
+		setSize(400,300);
+		
+		 result = 0;
+	      lastCommand = "=";
+	      start = true;
+		
+		GridBagLayout layout = new GridBagLayout();
+		setLayout(layout);
+		
+		ActionListener insert = new InsertAction();
+		ActionListener command = new CommandAction();
+		ActionListener reset = new ResetAction();
+		
+		//wyświetlacz 
+		display = new JButton("0");
+	      display.setEnabled(false);
+		//tworzenie przycisków
+		
+		//cyfry i kropka
+		  button1 = new JButton("1");
+	      button1.addActionListener(insert);
+	      button1.setEnabled(enable);
+	      
+	      button2 = new JButton("2");
+	      button2.addActionListener(insert);
+	      button2.setEnabled(enable);
+	      
+	      button3 = new JButton("3");
+	      button3.addActionListener(insert);
+	      button3.setEnabled(enable);
+	      
+	      button4 = new JButton("4");
+	      button4.addActionListener(insert);
+	      button4.setEnabled(enable);
+	      
+	      button5 = new JButton("5");
+	      button5.addActionListener(insert);
+	      button5.setEnabled(enable);
+	      
+	      button6 = new JButton("6");
+	      button6.addActionListener(insert);
+	      button6.setEnabled(enable);
+	      
+	      button7 = new JButton("7");
+	      button7.addActionListener(insert);
+	      button7.setEnabled(enable);
+	      
+	      button8 = new JButton("8");
+	      button8.addActionListener(insert);
+	      button8.setEnabled(enable);
+	      
+	      button9 = new JButton("9");
+	      button9.addActionListener(insert);
+	      button9.setEnabled(enable);
+	      
+	      button0 = new JButton("0");
+	      button0.addActionListener(insert);
+	      button0.setEnabled(enable);
+	      
+	      buttonDoc = new JButton(".");
+	      buttonDoc.addActionListener(insert);
+	      buttonDoc.setEnabled(enable);
+	      
+	     //działania 
+	      
+	      buttonAdd = new JButton("+");
+	      buttonAdd.addActionListener(command);
+	      buttonAdd.setEnabled(enable);
+	      
+	      buttonSub = new JButton("-");
+	      buttonSub.addActionListener(command);
+	      buttonSub.setEnabled(enable);
+	      
+	      buttonMult = new JButton("*");
+	      buttonMult.addActionListener(command);
+	      buttonMult.setEnabled(enable);
+	      
+	      buttonDiv = new JButton("/");
+	      buttonDiv.addActionListener(command);
+	      buttonDiv.setEnabled(enable);
+	      
+	      buttonSign = new JButton("+/-");
+	      buttonSign.addActionListener(command);
+	      buttonSign.setEnabled(enable);
+	      
+	      buttonSqrt = new JButton("sqrt");
+	      buttonSqrt.addActionListener(command);
+	      buttonSqrt.setEnabled(enable);
+	      
+	      buttonProc = new JButton("%");
+	      buttonProc.addActionListener(command);
+	      buttonProc.setEnabled(enable);
+	      
+	      buttonRes = new JButton("=");
+	      buttonRes.addActionListener(command);
+	      buttonRes.setEnabled(enable);
+	    	      
+	      
+	      JButton buttonClear = new JButton("C");
+	      buttonClear.addActionListener(reset);
+//	      
+//	    
+	
+//		face = new JComboBox(new String[] { "Serif", "SansSerif"
+//				
+//		});
+//		
+//		JLabel sizelabel = new JLabel("Rozmiar: ");
+//		
+//		add(facelabel, new GBC(0, 0).setWeight(0,0));
+//				//.setAnchor(GBC.NORTH));
+////		add(face, new GBC(1,0).setFill(GBC.HORIZONTAL).setWeight(100,0).setInsets(1));
+////		add(sizelabel, new GBC(0,1));
+	add(display, new GBC(0, 0,4,1).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonClear, new GBC(4, 0).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button7, new GBC(0, 1).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button8, new GBC(1, 1).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button9, new GBC(2, 1).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button4, new GBC(0, 2).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button5, new GBC(1, 2).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button6, new GBC(2, 2).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button1, new GBC(0, 3).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button2, new GBC(1, 3).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button3, new GBC(2, 3).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(button0, new GBC(0, 4).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonDoc, new GBC(1, 4).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonSign, new GBC(2, 4).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonDiv, new GBC(3, 1).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonMult, new GBC(3, 2).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonSub, new GBC(3, 3).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonAdd, new GBC(3, 4).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonSqrt, new GBC(4, 1).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonProc, new GBC(4, 2).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+	add(buttonRes, new GBC(4, 3,1,2).setInsets(5).setWeight(1,1).setFill(GBC.BOTH));
+
+//		//y
+//		add(addButton("1"), new GBC(1, 1).setInsets(0).setWeight(0,0));
+//		add(facelabel6, new GBC(1, 2).setInsets(0).setWeight(0,0));
+//		add(facelabel7, new GBC(1, 3).setInsets(0).setWeight(0,0));
+//		add(facelabel8, new GBC(1, 4).setInsets(0).setWeight(0,0));
+	
+	}
+	
+
+	/**
+	 * dodaje przycisk
+	 */
+
+
+	   /**
+	    * This action inserts the button action string to the end of the display text.
+	    */
+	   private class InsertAction implements ActionListener
+	   {
+	      public void actionPerformed(ActionEvent event)
+	      {
+	         String input = event.getActionCommand();
+	         if (start)
+	         {
+	            display.setText("");
+	            start = false;
+	         }
+	         display.setText(display.getText() + input);
+	      }
+	   }
+	   private class CommandAction implements ActionListener
+	   {
+	      public void actionPerformed(ActionEvent event)
+	      {
+	         String command = event.getActionCommand();
+	         
+	       try{ 
+	         if(command.equals("%"))
+	         {
+	        	 display.setText(""+
+	        			 Double.parseDouble(display.getText())/(100)
+	        	 );
+	        	 
+	         }
+	         
+	         if(command.equals("+/-"))
+	         {
+	        	 display.setText(""+
+	        			 Double.parseDouble(display.getText())*(-1)
+	        	 );
+	        	 
+	         }
+	         if(command.equals("sqrt"))
+	         {
+	        	 display.setText(""+
+	        			 
+	        			 Math.sqrt(Double.parseDouble(display.getText()))
+	        	 );
+	        	 
+	         }
+	         if (start)
+	         {
+	            if (command.equals(""))
+	            {
+	            	//
+	               display.setText("");
+	               start = true;
+	            }
+	            else lastCommand = command;
+	         }
+	         else
+	         {
+	            calculate(Double.parseDouble(display.getText()));
+	            lastCommand = command;
+	            start = true;
+	         }
+	       
+	        }
+	       catch (NumberFormatException e){ 
+	    	   display.setText("ERR");
+	    	   disable(); }
+	        // catch (TypWyjątku2 b){ Obsługa wyjątku b }
+	         
+	      }
+	   }
+	   private class ResetAction implements ActionListener
+	   {
+	      public void actionPerformed(ActionEvent event)
+	      {
+	    	 // String command = event.getActionCommand();
+	    	  	display.setText("");
+	    	  	result=0.0;
+	    	  	lastCommand = "=";
+	            start = false;
+	            enableButtons();
+	       //     
+	           
+	      }
+	   }
+	   public void calculate(double x)
+	   {
+	      if (lastCommand.equals("+")) result += x;
+	      else if (lastCommand.equals("-")) result -= x;
+	      else if (lastCommand.equals("*")) result *= x;
+	      else if (lastCommand.equals("/")) result /= x;
+	      //else if (lastCommand.equals("+/-")) result = -x;
+	      //else if (lastCommand.equals("%")) result = (x/100);
+	      
+	      else if (lastCommand.equals("=")) result = x;
+	      
+	      
+	      
+	      
+	      display.setText("" + result);
+	   }
+	   
+	   public void disable()
+	   {
+		    enable= false;
+		    button0.setEnabled(enable);
+		    button1.setEnabled(enable);
+		    button2.setEnabled(enable);
+		    button3.setEnabled(enable);
+		    button4.setEnabled(enable);
+		    button5.setEnabled(enable);
+		    button6.setEnabled(enable);
+		    button7.setEnabled(enable);
+		    button8.setEnabled(enable);
+		    button9.setEnabled(enable);
+		    buttonAdd.setEnabled(enable);
+		    buttonSub.setEnabled(enable);
+		    buttonMult.setEnabled(enable);
+		    buttonDiv.setEnabled(enable);
+		    buttonSqrt.setEnabled(enable);
+		    buttonSign.setEnabled(enable);
+		    buttonProc.setEnabled(enable);
+		    buttonRes.setEnabled(enable);
+		    buttonDoc.setEnabled(enable);
+	   }
+	   public void enableButtons()
+	   {
+		    enable= true;
+		    button0.setEnabled(enable);
+		    button1.setEnabled(enable);
+		    button2.setEnabled(enable);
+		    button3.setEnabled(enable);
+		    button4.setEnabled(enable);
+		    button5.setEnabled(enable);
+		    button6.setEnabled(enable);
+		    button7.setEnabled(enable);
+		    button8.setEnabled(enable);
+		    button9.setEnabled(enable);
+		    buttonAdd.setEnabled(enable);
+		    buttonSub.setEnabled(enable);
+		    buttonMult.setEnabled(enable);
+		    buttonDiv.setEnabled(enable);
+		    buttonSqrt.setEnabled(enable);
+		    buttonSign.setEnabled(enable);
+		    buttonProc.setEnabled(enable);
+		    buttonRes.setEnabled(enable);
+		    buttonDoc.setEnabled(enable);
+	   }
+	   private JButton display;
+	   
+	   private JButton button0;
+	   private JButton button1;
+	   private JButton button2;
+	   private JButton button3;
+	   private JButton button4;
+	   private JButton button5;
+	   private JButton button6;
+	   private JButton button7;
+	   private JButton button8;
+	   private JButton button9;
+	   private JButton buttonAdd;
+	   private JButton buttonSub;
+	   private JButton buttonMult;
+	   private JButton buttonDiv;
+	   private JButton buttonSqrt;
+	   private JButton buttonSign;
+	   private JButton buttonProc;
+	   private JButton buttonRes;
+	   private JButton buttonDoc;
+	   
+	   private double result;
+	   private String lastCommand;
+	   private boolean start;
+	   public boolean enable =true ;
+	  
+}

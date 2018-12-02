@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: LIGHTBLUE;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Ellipse blendMode="DARKEN" layoutX="408.0" layoutY="157.0" radiusX="74.0" radiusY="30.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#509ada" />
+                  <Stop color="#1c1cda" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Ellipse>
+      <Ellipse fill="DODGERBLUE" layoutX="195.0" layoutY="249.0" radiusX="83.0" radiusY="35.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Polygon blendMode="DARKEN" layoutX="488.0" layoutY="167.0" rotate="-90.0" scaleX="0.7" scaleY="0.7" stroke="TRANSPARENT" strokeType="INSIDE">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.007407407407407408" />
+                  <Stop color="#0532fc" offset="0.007407407407407408" />
+                  <Stop color="#4875f2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Polygon>
+      <Polygon fill="DODGERBLUE" layoutX="112.0" layoutY="259.0" rotate="90.0" scaleX="0.7" stroke="TRANSPARENT" strokeType="INSIDE">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="480.0" layoutY="348.0" rotate="-64.7" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+      <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="466.0" layoutY="347.0" rotate="-90.0" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+      <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="452.0" layoutY="347.0" rotate="-116.6" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+      <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="434.0" layoutY="348.0" rotate="-133.0" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+      <Circle fill="#1f93ff00" layoutX="326.0" layoutY="67.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="254.0" layoutY="237.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="326.0" layoutY="122.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="350.0" layoutY="37.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="355.0" layoutY="146.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff00" layoutX="342.0" layoutY="98.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

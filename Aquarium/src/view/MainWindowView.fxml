@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" styleClass="anchor" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="95.0" layoutX="-2.0" layoutY="388.0" stroke="TRANSPARENT" strokeType="INSIDE" width="647.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.9571428571428571" startX="1.0">
+               <stops>
+                  <Stop color="#755205" />
+                  <Stop color="#2f1b03" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Group fx:id="fish1" layoutX="388.0" layoutY="121.0">
+         <children>
+            <Polygon fx:id="fish1Tail" layoutX="165.0" layoutY="54.0" rotate="-90.0" scaleX="0.7" scaleY="0.7" stroke="TRANSPARENT" strokeType="INSIDE">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.9571428571428571" startX="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#e82b0a" offset="0.007407407407407398" />
+                        <Stop color="#da0e0e" offset="0.007407407407407399" />
+                        <Stop color="#d90f0f" offset="0.8084291187739462" />
+                        <Stop color="#f2705300" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polygon>
+            <Ellipse blendMode="SRC_ATOP" layoutX="98.0" layoutY="44.0" radiusX="63.0" radiusY="25.0" stroke="TRANSPARENT" strokeType="OUTSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d98250" />
+                        <Stop color="#e42a12" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Ellipse>
+            <Circle fill="#1f93ff00" layoutX="48.0" layoutY="39.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="bubble2" layoutX="43.0" layoutY="-16.0" radius="8.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.5277777777777778" centerY="0.5047619047619047" focusDistance="-0.06976744186046513" radius="1.0">
+                     <stops>
+                        <Stop color="#2197ff" />
+                        <Stop color="#1562a4" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill></Circle>
+            <Circle fx:id="bubble3" layoutX="16.0" layoutY="-41.0" radius="8.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.5277777777777778" centerY="0.5047619047619047" focusDistance="-0.06976744186046513" radius="0.8255813953488372">
+                     <stops>
+                        <Stop color="#2197ff" />
+                        <Stop color="#2197ff" offset="0.007662835249042145" />
+                        <Stop color="#125ea1" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill></Circle>
+            <Circle fx:id="bubble1" layoutX="24.0" layoutY="24.0" radius="8.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <RadialGradient centerX="0.5555555555555556" centerY="0.5047619047619047" focusDistance="-0.06976744186046513" radius="0.8255813953488372">
+                     <stops>
+                        <Stop color="#2197ff" />
+                        <Stop color="#1374c9" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill></Circle>
+         </children>
+      </Group>
+      <Group fx:id="fish2" layoutX="64.0" layoutY="286.0">
+         <children>
+            <Polygon fx:id="fish2Tail" layoutX="24.0" layoutY="8.0" rotate="90.0" scaleX="0.5" scaleY="0.7" stroke="TRANSPARENT" strokeType="INSIDE">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+               <fill>
+                  <LinearGradient endX="0.8523809523809524" endY="1.0" startX="0.8476190476190476" startY="0.41904761904761895">
+                     <stops>
+                        <Stop color="#d98250" />
+                        <Stop color="#ff4b1f" offset="0.19528380139827" />
+                        <Stop color="#ff1ffe" offset="0.5212702926887072" />
+                        <Stop color="#401fff7b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polygon>
+            <Ellipse layoutX="79.0" layoutY="-2.0" radiusX="55.0" radiusY="23.0" stroke="TRANSPARENT" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.9571428571428571" startX="1.0">
+                     <stops>
+                        <Stop color="#5b1880" />
+                        <Stop color="#e10be5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill></Ellipse>
+            <Circle fill="#1f93ff00" layoutX="112.0" layoutY="-13.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Group>
+      <Group layoutX="452.0" layoutY="294.0">
+         <children>
+            <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="51.627044677734375" layoutY="94.62017822265625" rotate="-64.7" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+            <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="58.639404296875" layoutY="104.58013916015625" rotate="-90.0" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+            <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="69.52505493164062" layoutY="105.27365112304688" rotate="-116.6" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+            <CubicCurve controlX1="-30.0" controlX2="50.0" controlY1="-30.0" controlY2="50.0" endX="50.0" fill="#1f93ff00" layoutX="66.03793334960938" layoutY="101.01901245117188" rotate="-133.0" startX="-50.0" stroke="#2fcc29" strokeWidth="3.0" />
+         </children>
+      </Group>
+      <Group fx:id="hookGroup" layoutX="110.0" layoutY="56.0">
+         <children>
+            <Line endX="100.0" layoutX="25.752174377441406" rotate="90.0" startX="-100.0" stroke="#874f3e67" strokeWidth="6.0" />
+            <Circle fill="#1f93ff00" layoutX="26.0" layoutY="103.0" radius="8.0" stroke="#978f8f" strokeType="INSIDE" strokeWidth="3.0" />
+            <QuadCurve controlX="-100.0" controlY="-150.0" endX="50.0" fill="#1f93ff00" layoutX="35.0" layoutY="174.0" rotate="-131.2" scaleX="0.5" scaleY="0.5" scaleZ="0.5" startX="-50.0" stroke="#978f8f" strokeType="INSIDE" strokeWidth="6.0" />
+         </children>
+      </Group>
+      <QuadCurve controlY="-100.0" endX="50.0" layoutX="156.0" layoutY="461.0" scaleX="2.0" scaleY="1.5" startX="-50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Group fx:id="eyesGroup" layoutX="103.0" layoutY="414.0">
+         <children>
+            <Ellipse fill="WHITE" layoutX="24.0" layoutY="30.0" radiusX="23.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+            <Ellipse fill="WHITE" layoutX="69.0" layoutY="30.0" radiusX="23.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+            <Group fx:id="innerEyesGroup" layoutX="32.0" layoutY="30.0">
+               <children>
+                  <Circle fx:id="eye1" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="eye2" layoutX="46.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Group>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

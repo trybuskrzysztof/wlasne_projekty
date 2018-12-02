@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#label {
+	-fx-font-style: italic;
+}
+
+.mybutton {
+    -fx-background-color: rgba(205,205,205,0.7);
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2 ;
+    -fx-font-weight: bold;
+}
+
+#countfont {
+	-fx-font: 18px Tahoma;
+}
+
+.mytext {
+    -fx-font: 12px Tahoma;
+    -fx-font-weight: bold;
+
+}

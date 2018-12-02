@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="Base64Decoder.java"/>
+	<classpathentry kind="lib" path="BufferedImageLuminanceSource.java"/>
+	<classpathentry kind="lib" path="CommandLineEncoder.java"/>
+	<classpathentry kind="lib" path="CommandLineRunner.java"/>
+	<classpathentry kind="lib" path="DecoderConfig.java"/>
+	<classpathentry kind="lib" path="DecodeWorker.java"/>
+	<classpathentry kind="lib" path="EncoderConfig.java"/>
+	<classpathentry kind="lib" path="GUIRunner.java"/>
+	<classpathentry kind="lib" path="ImageReader.java"/>
+	<classpathentry kind="lib" path="Java8Base64Decoder.java"/>
+	<classpathentry kind="lib" path="JAXBBase64Decoder.java"/>
+	<classpathentry kind="lib" path="MatrixToImageConfig.java"/>
+	<classpathentry kind="lib" path="MatrixToImageWriter.java"/>
+	<classpathentry kind="lib" path="C:/Users/trybusk/Downloads/zxing-zxing-3.3.0.zip"/>
+	<classpathentry kind="lib" path="common/BitArray.java"/>
+	<classpathentry kind="lib" path="common/BitMatrix.java"/>
+	<classpathentry kind="lib" path="common/BitSource.java"/>
+	<classpathentry kind="lib" path="common/CharacterSetECI.java"/>
+	<classpathentry kind="lib" path="common/DecoderResult.java"/>
+	<classpathentry kind="lib" path="common/DefaultGridSampler.java"/>
+	<classpathentry kind="lib" path="common/DetectorResult.java"/>
+	<classpathentry kind="lib" path="common/GlobalHistogramBinarizer.java"/>
+	<classpathentry kind="lib" path="common/GridSampler.java"/>
+	<classpathentry kind="lib" path="common/HybridBinarizer.java"/>
+	<classpathentry kind="lib" path="common/PerspectiveTransform.java"/>
+	<classpathentry kind="lib" path="common/StringUtils.java"/>
+	<classpathentry kind="lib" path="LuminanceSource.java"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

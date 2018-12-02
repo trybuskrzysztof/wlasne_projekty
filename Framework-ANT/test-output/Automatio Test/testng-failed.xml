@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automatio Test]">
+  <test name="Smoke Testcases(failed)">
+    <classes>
+      <class name="packTwo.Annot2">
+        <methods>
+          <include name="installsoftware"/>
+          <include name="software"/>
+        </methods>
+      </class> <!-- packTwo.Annot2 -->
+      <class name="testngFiles.DependenyAnnot">
+        <methods>
+          <include name="OpeningBrowser"/>
+          <include name="Timerelated"/>
+          <include name="software"/>
+          <include name="FlightBooking"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- testngFiles.DependenyAnnot -->
+      <class name="packTwo.Annotations">
+        <methods>
+          <include name="OpeningBrowser"/>
+          <include name="FlightCancel"/>
+          <include name="Cookies"/>
+          <include name="FlightBooking"/>
+        </methods>
+      </class> <!-- packTwo.Annotations -->
+      <class name="testngFiles.TestBase">
+        <methods>
+          <include name="software"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- testngFiles.TestBase -->
+      <class name="testngFiles.WebDriverTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="webDriver"/>
+        </methods>
+      </class> <!-- testngFiles.WebDriverTest -->
+      <class name="testngFiles.SaucelabTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testngFiles.SaucelabTest -->
+      <class name="packTwo.DependenyAnnot">
+        <methods>
+          <include name="FlightBooking"/>
+          <include name="Timerelated"/>
+          <include name="OpeningBrowser"/>
+        </methods>
+      </class> <!-- packTwo.DependenyAnnot -->
+    </classes>
+  </test> <!-- Smoke Testcases(failed) -->
+</suite> <!-- Failed suite [Automatio Test] -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13363" started-at="2017-08-20T17:36:21Z" finished-at="2017-08-20T17:36:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13363" started-at="2017-08-20T17:36:21Z" finished-at="2017-08-20T17:36:34Z">
+      <class name="testngFiles.Annotations2">
+        <test-method status="PASS" signature="InstallSoftware()[pri:0, instance:testngFiles.Annotations2@56f4468b]" name="InstallSoftware" duration-ms="18" started-at="2017-08-20T19:36:21Z" finished-at="2017-08-20T19:36:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InstallSoftware -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testngFiles.Annotations2@56f4468b]" name="Login" duration-ms="13294" started-at="2017-08-20T19:36:21Z" finished-at="2017-08-20T19:36:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="TestSoftware()[pri:0, instance:testngFiles.Annotations2@56f4468b]" name="TestSoftware" duration-ms="5" started-at="2017-08-20T19:36:34Z" finished-at="2017-08-20T19:36:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSoftware -->
+        <test-method status="PASS" signature="UninstallSoftware()[pri:0, instance:testngFiles.Annotations2@56f4468b]" name="UninstallSoftware" is-config="true" duration-ms="1" started-at="2017-08-20T19:36:34Z" finished-at="2017-08-20T19:36:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UninstallSoftware -->
+      </class> <!-- testngFiles.Annotations2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
